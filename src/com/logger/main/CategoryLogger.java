@@ -152,8 +152,6 @@ public class CategoryLogger {
 				String.format(categoryFormat, usingCategory) : "";
 		
 		String now = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
-		System.out.println(message);
-		System.out.println(Arrays.toString(params));
 		String logMessage = now + ": " + categoryLog + String.format(message, params) + "\r\n";
 		synchronized(this) {	
 			out.append(logMessage);
