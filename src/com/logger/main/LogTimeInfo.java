@@ -2,20 +2,20 @@ package com.logger.main;
 
 class LogTimeInfo {
 
-	private final TimeUnits units;
-	private final long start;
+  private final TimeUnits units;
+  private final long start;
 
-	LogTimeInfo(TimeUnits units, long start) {
-		super();
-		this.units = units;
-		this.start = start;
-	}
+  LogTimeInfo(TimeUnits units, long start) {
+    super();
+    this.units = units;
+    this.start = start;
+  }
 
-	TimeUnits getUnits() {
-		return units;
-	}
+  TimeUnits getUnits() {
+    return units;
+  }
 
-	long getStart() {
-		return start;
-	}
+  long getStart() {
+    return start;
+  }
 }
