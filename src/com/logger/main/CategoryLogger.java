@@ -204,7 +204,7 @@ public class CategoryLogger {
    * Logs end time for the corresponding key with the corresponding message, under the category. It
    * should contain %f.
    */
-  public void logTimeEnd(Object key, String category, String message) {
+  public double logTimeEnd(Object key, String category, String message) {
     if (key == null) {
       throw new IllegalArgumentException("key is null.");
     }
@@ -217,6 +217,7 @@ public class CategoryLogger {
     LogTimeInfo logTimeInfo = timeMap.get(key);
     long duration = System.nanoTime() - logTimeInfo.getStart();
     logTime(category, message, duration, TimeUnits.NANOSECONDS, logTimeInfo.getUnits());
+    return getTime(duration, TimeUnits.NANOSECONDS, logTimeInfo.getUnits());
   }
 
   /**
